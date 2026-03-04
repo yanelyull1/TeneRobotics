@@ -1,0 +1,303 @@
+/* ESTILO CANVA - LIMPIO, ELEGANTE Y TECNOLÓGICO */
+:root {
+    --primario: #0a192f; /* Azul noche muy profundo (más tech) */
+    --secundario: #00e6ff; /* Azul cian eléctrico (más neón) */
+    --acento: #f0f9ff;
+    --texto: #2d3436;
+    --blanco: #ffffff;
+    --sombra: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra un poco más fuerte */
+    --overlay-oscuro: rgba(5, 10, 20, 0.6); /* Superposición más oscura para resaltar tech */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    color: var(--texto);
+    background-color: #f4f7f6; /* Gris muy claro para fondo */
+    scroll-behavior: smooth;
+}
+
+/* Navegación estilo Minimalista y Transparente */
+nav {
+    background: rgba(10, 25, 47, 0.9); /* Fondo oscuro semitransparente */
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--sombra);
+    backdrop-filter: blur(10px); /* Efecto cristal esmerilado */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--secundario); /* Logo en azul eléctrico */
+    font-size: 1.2rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--blanco);
+    margin-left: 30px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+    color: var(--secundario);
+}
+
+.btn-reserva {
+    background: var(--secundario);
+    color: var(--primario) !important;
+    padding: 10px 25px;
+    border-radius: 50px; /* Bordes muy redondos estilo Canva */
+    font-weight: 700;
+}
+
+/* Hero Section con Imagen de Hotel Super Tecnológico */
+.hero {
+    height: 100vh;
+    /* NUEVA IMAGEN: Un hotel futurista con luces LED y asistente robótico */
+    background: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay {
+    background: var(--overlay-oscuro);
+    padding: 60px;
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    margin: 15px 0;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.hero h1 .light {
+    font-weight: 300;
+    color: var(--secundario); /* "Parador" en azul eléctrico */
+}
+
+.hero span {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+    color: var(--secundario);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 20px auto 30px;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background: var(--secundario);
+    color: var(--primario);
+    padding: 18px 50px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    display: inline-block;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 230, 255, 0.5);
+}
+
+/* Secciones */
+.section {
+    padding: 120px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-center { text-align: center; }
+
+.title {
+    font-size: 2.8rem;
+    color: var(--primario);
+    margin-bottom: 10px;
+}
+
+.underline {
+    width: 80px;
+    height: 5px;
+    background: var(--secundario);
+    margin: 0 auto 30px;
+    border-radius: 2px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #57606f;
+    margin-bottom: 60px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tarjetas Estilo Canva (Soft Cards) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 50px;
+}
+
+.card {
+    background: white;
+    padding: 50px;
+    border-radius: 30px; /* Bordes muy suaves */
+    box-shadow: var(--sombra);
+    text-align: center;
+    border: 1px solid #e1e8ed;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    border-color: var(--secundario);
+}
+
+.card-icon {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    background: var(--acento);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.card h3 {
+    margin-bottom: 18px;
+    color: var(--primario);
+    font-size: 1.5rem;
+}
+
+.card p {
+    color: #57606f;
+    line-height: 1.7;
+}
+
+/* Footer */
+footer {
+    background: var(--primario);
+    color: var(--blanco);
+    text-align: center;
+    padding: 80px 20px;
+    letter-spacing: 1px;
+}
+
+footer p strong {
+    color: var(--secundario);
+}
+
+/* --- ESTILOS EXTRA PARA RESERVAS --- */
+
+.bg-reserva {
+    background: linear-gradient(135deg, #f4f7f6 0%, #e2e8f0 100%);
+    padding-top: 80px;
+}
+
+.section-reserva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.form-container {
+    background: var(--blanco);
+    max-width: 600px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: var(--sombra);
+    border: 1px solid rgba(0, 230, 255, 0.2);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h2 {
+    color: var(--primario);
+    margin: 0;
+}
+
+.form-style .form-group {
+    margin-bottom: 20px;
+}
+
+.form-style label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--primario);
+}
+
+.form-style input, .form-style select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box; /* Para que el padding no ensanche el input */
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.checkbox-group {
+    background: var(--acento);
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+}
+
+.full-width {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+/* Ajuste para el botón del index.html */
+.btn-reserva {
+    cursor: pointer;
+}

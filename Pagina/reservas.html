@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva tu Experiencia | TeneRobotics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-reserva">
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">TENEROBOTICS</div>
+            <div class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#experiencia">Tecnología</a>
+                <a href="index.html#servicios">Servicios</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section-reserva">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Configura tu Estancia</h2>
+                <p>Personaliza tu entorno tecnológico antes de llegar.</p>
+            </div>
+
+            <form id="formReserva" class="form-style">
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Correo Electrónico</label>
+                    <input type="email" placeholder="usuario@futuro.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Tipo de Habitación</label>
+                    <select id="habitacion" required>
+                        <option value="" disabled selected>Selecciona tu cápsula de descanso</option>
+                        <option value="androide">Suite Androide (Doble estándar con IA)</option>
+                        <option value="ciborg">Habitación Cíborg (Equipada con VR y Gimnasio)</option>
+                        <option value="ia">Penthouse IA (Vista al Teide y Mayordomo Robótico)</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Check-in</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Check-out</label>
+                        <input type="date" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Pre-configuración de Domótica</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox"> Modo Bio-iluminación (Jet Lag)</label><br>
+                        <label><input type="checkbox"> Temperatura pre-ajustada (21°C)</label><br>
+                        <label><input type="checkbox"> Almohada con altavoces integrados</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary full-width">CONFIRMAR RESERVA INTELIGENTE</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>TeneRobotics Parador S.L.</strong> | Seguridad y Privacidad Encriptada</p>
+    </footer>
+    <script>
+        document.getElementById('formReserva').addEventListener('submit', function (e) {
+            e.preventDefault(); // Evita que la página se recargue
+
+            // Ocultamos el formulario con un efecto suave
+            this.innerHTML = `
+            <div style="text-align: center; padding: 40px; animation: fadeIn 0.8s ease;">
+                <div style="font-size: 5rem; margin-bottom: 20px;">✅</div>
+                <h2 style="color: #1a2a6c; margin-bottom: 15px;">¡Reserva Confirmada!</h2>
+                <p style="color: #57606f; line-height: 1.6;">
+                    Los sistemas de <strong>TeneRobotics</strong> han procesado tu solicitud correctamente.<br>
+                    Tu habitación está siendo configurada por nuestra IA central.
+                </p>
+                <div style="margin-top: 30px; padding: 15px; background: #f0f9ff; border-radius: 15px; border: 1px dashed #00e6ff;">
+                    <small style="color: #1a2a6c;">Recibirás los códigos de acceso biométrico en tu terminal móvil.</small>
+                </div>
+                <br>
+                <a href="index.html" class="btn-primary" style="text-decoration: none; font-size: 0.8rem; padding: 10px 20px;">Volver al Inicio</a>
+            </div>
+        `;
+        });
+    </script>
+
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</body>
+
+</html>

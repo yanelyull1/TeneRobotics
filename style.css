@@ -434,3 +434,125 @@ footer {
     .room-card { padding: 25px; }
     .room-card h2 { font-size: 1.5rem; }
 }
+
+/* --- COPIAR DESDE AQUÍ PARA EL MÓVIL --- */
+
+@media (max-width: 768px) {
+    /* Ajustamos el fondo para que no se mueva raro en móvil */
+    .srv-body, .srv-page-bg {
+        background-attachment: scroll !important; 
+    }
+
+    /* Reducimos el tamaño de los textos principales */
+    .srv-title, .title {
+        font-size: 1.8rem !important;
+        padding: 0 10px;
+    }
+
+    .srv-main-content {
+        padding-top: 80px !important; /* Menos espacio arriba en móvil */
+    }
+
+    /* EL TRUCO DEL ALMENDRUCO: Pasamos de 3 columnas a 1 sola */
+    .srv-grid, .grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+        padding: 15px !important;
+    }
+
+    /* Ajustamos las tarjetas para que no sean tan gigantes */
+    .srv-card, .srv-card-glass, .card {
+        padding: 20px !important;
+        margin: 0 10px;
+    }
+
+    .srv-icon {
+        font-size: 2rem !important;
+    }
+
+    /* Menú adaptado: los elementos se centran y se apilan si no caben */
+    .nav-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .menu {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .menu a {
+        font-size: 0.75rem !important;
+        margin: 5px !important;
+    }
+
+    /* Botón de reserva a ancho completo para que sea fácil de pulsar */
+    .btn-reserva, .srv-btn-reserva {
+        display: block;
+        width: 90%;
+        margin: 10px auto 0;
+        text-align: center;
+    }
+}
+
+/* --- HASTA AQUÍ --- */
+
+/* --- MEDIA QUERIES PARA MÓVIL --- */
+
+@media (max-width: 768px) {
+    /* 1. Ajustamos el Header/Hero */
+    .hero h1 {
+        font-size: 2.2rem !important; /* Texto más pequeño para que no se corte */
+    }
+
+    .hero p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    /* 2. El Menú de Navegación */
+    .nav-container {
+        flex-direction: column; /* Logo arriba, menú abajo */
+        padding: 15px;
+    }
+
+    .menu {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menu a {
+        margin: 0 10px;
+        font-size: 0.8rem;
+    }
+
+    /* 3. Las Cuadrículas (Grids) */
+    /* Esto hace que las tarjetas pasen de 3 columnas a 1 sola */
+    .grid, .srv-grid {
+        grid-template-columns: 1fr !important; 
+        padding: 10px;
+    }
+
+    /* 4. Ajuste de las Tarjetas */
+    .card, .srv-card, .srv-card-glass {
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    .srv-title {
+        font-size: 2rem;
+    }
+
+    /* 5. El botón de reserva en móvil */
+    .btn-reserva, .srv-btn-reserva {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+}

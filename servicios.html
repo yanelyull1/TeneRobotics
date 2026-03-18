@@ -5,62 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios | TeneRobotics Parador</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> <style>
-        /* ESTILOS EXCLUSIVOS PARA QUE NO SE ROMPA EL INICIO */
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* AJUSTES PARA QUE EL NAV NO TAPE EL CONTENIDO */
         .srv-container {
-            padding: 40px 5%;
+            /* Aumentamos el padding superior para empujar todo hacia abajo */
+            padding: 120px 5% 60px 5%; 
             position: relative;
             z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .srv-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
-            margin-top: 30px;
+            margin-top: 40px;
+            width: 100%;
+            max-width: 1200px;
         }
 
-        /* Tarjetas estilo "Glass" para que se vea el fondo pero se lea el texto */
+        /* Tarjetas estilo "Glass" */
         .srv-card {
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 30px;
-            border-radius: 15px;
+            border-radius: 20px;
             transition: 0.3s;
+            text-align: left;
         }
 
         .srv-card:hover {
             border-color: #00f2fe;
             transform: translateY(-5px);
+            background: rgba(0, 0, 0, 0.8);
         }
 
         .srv-icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
-        .srv-card h3 { color: #00f2fe; margin-bottom: 10px; font-size: 1.3rem; }
-        .srv-card p { font-size: 0.9rem; color: #ddd; margin-bottom: 15px; }
+        .srv-card h3 { color: #00f2fe; margin-bottom: 10px; font-size: 1.3rem; text-transform: uppercase; }
+        .srv-card p { font-size: 0.9rem; color: #ddd; margin-bottom: 15px; line-height: 1.6; }
 
         .srv-list { 
             padding: 0; 
             list-style: none; 
             font-size: 0.85rem; 
             color: #eee; 
-            text-align: left;
         }
-        .srv-list li { margin-bottom: 8px; padding-left: 15px; position: relative; }
-        .srv-list li::before { content: "•"; position: absolute; left: 0; color: #00f2fe; }
+        .srv-list li { margin-bottom: 8px; padding-left: 20px; position: relative; }
+        .srv-list li::before { content: "•"; position: absolute; left: 0; color: #00f2fe; font-weight: bold; }
 
-        /* Ajuste para que el fondo hero cubra toda la página de servicios */
         body.srv-page-bg {
+            margin: 0;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            background-color: #000;
         }
         
-        /* Forzamos que el hero-overlay cubra todo el scroll */
+        /* Fondo Hero que cubre todo el scroll */
         .hero.srv-full {
             height: auto;
             min-height: 100vh;
             background-attachment: fixed;
+            display: block; /* Importante para que no centre el contenido verticalmente y tape el nav */
+        }
+
+        /* Títulos */
+        .srv-container h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin: 10px 0;
+            color: white;
+        }
+
+        .srv-container span {
+            color: #00f2fe;
+            letter-spacing: 3px;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+            .srv-container { padding-top: 140px; }
+            .srv-container h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -71,7 +100,7 @@
         <div class="logo">TENEROBOTICS</div>
         <div class="menu">
             <a href="index.html">Inicio</a>
-            <a href="servicios.html" style="color: #00f2fe;">Servicios</a> 
+            <a href="servicios.html" style="color: #00f2fe; font-weight: bold;">Servicios</a> 
             <a href="reservas.html" class="btn-reserva">Reservar</a>
         </div>
     </div>
@@ -82,7 +111,7 @@
         <div class="srv-container">
             <span>NUESTRAS EXPERIENCIAS</span>
             <h1>Unidades de <br> Alojamiento</h1>
-            <div class="underline" style="margin: 20px auto;"></div>
+            <div class="underline"></div>
             
             <div class="srv-grid">
                 <div class="srv-card">
@@ -91,7 +120,7 @@
                     <p>Habitación inteligente que aprende del huésped mediante sensores Lidar.</p>
                     <ul class="srv-list">
                         <li>Configuración de perfil digital al entrar</li>
-                        <li>Iluminación anti jet-lag</li>
+                        <li>Iluminación anti jet-lag dinámica</li>
                         <li>Colchón térmico predictivo</li>
                     </ul>
                 </div>
@@ -119,14 +148,14 @@
                 </div>
             </div>
 
-            <div style="margin-top: 40px;">
-                <a href="reservas.html" class="btn-primary" style="text-decoration: none;">Reservar Ahora</a>
+            <div style="margin-top: 50px;">
+                <a href="reservas.html" class="btn-primary" style="text-decoration: none; padding: 15px 40px;">Reservar Ahora</a>
             </div>
         </div>
     </div>
 </header>
 
-<footer style="background: black;">
+<footer style="background: black; padding: 40px 0; text-align: center;">
     <p>PROYECTO SISTEMAS 2026</p>
     <p><strong>TeneRobotics Parador S.L.</strong></p>
 </footer>

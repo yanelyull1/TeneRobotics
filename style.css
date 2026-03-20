@@ -556,3 +556,52 @@ footer {
         margin-top: 10px;
     }
 }
+
+
+.card-habitacion {
+    position: relative;
+    padding-top: 70px !important;
+}
+
+.price-tag {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: #00e6ff;
+    color: #0a192f;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0, 230, 255, 0.3);
+}
+
+/* Ajuste para que los precios se vean bien en tus srv-cards */
+.srv-card {
+    position: relative;
+    padding-top: 60px !important; /* Espacio para el precio */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #00e6ff; /* El azul cian que usamos antes */
+    color: #0a192f;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0, 230, 255, 0.4);
+    border: 1px solid #fff;
+}
+
+/* Mejora de la lista para que no se vea desordenada */
+.srv-list {
+    text-align: left;
+    margin-top: 15px;
+    font-size: 0.85rem;
+}
